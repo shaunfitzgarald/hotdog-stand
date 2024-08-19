@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth } from './firebase';
+import { auth } from '../firebase';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
@@ -25,21 +25,27 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-md mx-auto p-8 bg-white rounded-lg shadow-md">
       <input
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        className="w-full p-2 mb-4 border border-gray-300 rounded"
       />
       <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        className="w-full p-2 mb-4 border border-gray-300 rounded"
       />
-      <button onClick={handleSignIn}>Sign In</button>
-      <button onClick={handleSignUp}>Sign Up</button>
+      <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600" onClick={handleSignIn}>
+        Sign In
+      </button>
+      <button className="w-full bg-green-500 text-white py-2 rounded mt-4 hover:bg-green-600" onClick={handleSignUp}>
+        Sign Up
+      </button>
     </div>
   );
 };

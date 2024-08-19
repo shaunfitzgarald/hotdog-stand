@@ -3,14 +3,15 @@ import Header from './components/Header';
 import Map from './components/Map';
 import Profiles from './components/Profiles';
 import Footer from './components/Footer';
-import './styles.css';
 
 function App() {
   return (
-    <div className="container">
+    <div className="flex flex-col min-h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white">
       <Header />
-      <Map />
-      <Profiles />
+      <main className="flex-grow">
+        <Map />
+        <Profiles />
+      </main>
       <Footer />
     </div>
   );

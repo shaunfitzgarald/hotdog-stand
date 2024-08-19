@@ -9,9 +9,9 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
-};
+    lat: 32.7486,
+    lng: -117.1673
+  };
 
 const Map = ({ userLocation }) => {
   return (
@@ -20,6 +20,7 @@ const Map = ({ userLocation }) => {
         mapContainerStyle={containerStyle}
         center={userLocation || center}
         zoom={13}
+        className="rounded-lg mt-4"
       >
         {userLocation && <Marker position={userLocation} />}
       </GoogleMap>
